@@ -24,7 +24,7 @@ namespace casestudy.Models
         [Display(Name = "Password")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
-
+        [NotMapped]
         [Required(ErrorMessage = "Confirm Password is required")]
         [Display(Name = "Confirm Password")]
         [DataType(DataType.Password)]
