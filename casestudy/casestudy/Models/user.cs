@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -13,18 +14,19 @@ namespace casestudy.Models
         [Required(ErrorMessage = "User Name is required")]
         [Display(Name = "First Name")]
         public string Firstname { get; set; }
+       
 
         [Required(ErrorMessage = "Last Name is required")]
         [Display(Name = "First Name")]
         public string Lastname { get; set; }
-
+      
         [Required(ErrorMessage = "Password is required")]
         [StringLength(maximumLength: 8, ErrorMessage = "password length should be atleast 8 characters")]
         [RegularExpression("(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{8,15})$")]
         [Display(Name = "Password")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
-
+       
         [Required(ErrorMessage = "Confirm Password is required")]
         [Display(Name = "Confirm Password")]
         [DataType(DataType.Password)]
