@@ -10,7 +10,7 @@ namespace casestudy.Models
 {
     public class user
     {
-        [Key]
+        
         [Required]
         [Display(Name = "user code")]
         public string userid { get; set; }
@@ -28,7 +28,7 @@ namespace casestudy.Models
         [Display(Name = "Password")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
-        //[NotMapped]
+        [NotMapped]
         [Required(ErrorMessage = "Confirm Password is required")]
         [Display(Name = "Confirm Password")]
         [DataType(DataType.Password)]
@@ -42,7 +42,7 @@ namespace casestudy.Models
         [Display(Name = "Contact Number")]
         [Required(ErrorMessage = "Contact number is required")]
         public string Contactnumber { get; set; }
-
+        [Key]
         [Required(ErrorMessage = "email is required")]
         [Display(Name = "Email")]
         [DataType(DataType.EmailAddress)]
@@ -56,6 +56,6 @@ namespace casestudy.Models
         [Required(ErrorMessage = "Country is required")]
         public string Countryy { get; set; }
 
-        public string Role { get; set; }
+       
     }
 }
