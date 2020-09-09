@@ -10,6 +10,10 @@ namespace casestudy.Models
 {
     public class user
     {
+        [Key]
+        [Required]
+        [Display(Name = "user code")]
+        public string userid { get; set; }
         [Required(ErrorMessage = "User Name is required")]
         [Display(Name = "First Name")]
         public string Firstname { get; set; }
