@@ -10,7 +10,7 @@ namespace casestudy.Models
 {
     public class Product
     {
-        
+        [Key]
         [Required]
         [Display(Name = "product code")]
         public string productid { get; set; }
