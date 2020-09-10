@@ -67,7 +67,7 @@ namespace casestudy.Controllers
            else
             return View(product);
         }
-        public ActionResult detials(int ?id)
+        public ActionResult details(int ?id)
         {
             if (id == null)
             {
