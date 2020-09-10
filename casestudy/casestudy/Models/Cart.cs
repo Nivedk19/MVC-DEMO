@@ -20,6 +20,7 @@ namespace casestudy.Models
         public Product product { get; set; }
         [ForeignKey("Usertid")]
         public user user { get; set; }
+        
 
 
 
