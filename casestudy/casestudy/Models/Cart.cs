@@ -13,7 +13,7 @@ namespace casestudy.Models
         [DataType(DataType.EmailAddress)]
         public int Userid { get; set; }
         [Key, Column(Order = 2)]
-        public string Productid { get; set; }
+        public int Productid { get; set; }
         public string Productname { get; set; }
         public int Noofproducts { get; set; }
         [ForeignKey("productid")]
