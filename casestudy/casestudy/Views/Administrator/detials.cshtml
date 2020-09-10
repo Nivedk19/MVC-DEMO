@@ -1,0 +1,58 @@
+﻿@model casestudy.Models.Product
+
+@{
+    ViewBag.Title = "detials";
+}
+
+<h2>detials</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.productname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Categoryname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categoryname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.units)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.units)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.discount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.discount)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.productid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

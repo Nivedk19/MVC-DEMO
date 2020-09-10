@@ -57,7 +57,7 @@ namespace casestudy.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult edit([Bind(Include = "productid,productname,Categoryname,Units,discount")] Product product)
+        public ActionResult edit([Bind(Include = "productid,productname,Categoryname,Units,Price,discount")] Product product)
         {   if (ModelState.IsValid)
             {
                 productcontext.Entry(product).State = EntityState.Modified;

@@ -179,6 +179,8 @@
     <Content Include="Views\Main\regestration.cshtml" />
     <Content Include="Views\Main\log.cshtml" />
     <Content Include="Views\C\Index.cshtml" />
+    <Content Include="Views\Administrator\detials.cshtml" />
+    <Content Include="Views\C\cview.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

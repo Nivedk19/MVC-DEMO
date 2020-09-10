@@ -57,7 +57,7 @@ namespace casestudy.Controllers
                 {
                     Session["email"] = obj.Email.ToString();
                     Session["password"] = obj.Password.ToString();
-                    return RedirectToAction("Index", "C");
+                    return RedirectToAction("cview", "C");
                 }
                 else if (obj == null)
                 {
