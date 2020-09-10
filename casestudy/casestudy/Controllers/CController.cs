@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace casestudy.Controllers
 {
-    public class CustomerController : Controller
+    public class CController : Controller
     {
-        // GET: Customer
+        // GET: C
         public ActionResult Index()
         {
             return View();
