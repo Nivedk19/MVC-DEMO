@@ -11,7 +11,7 @@ namespace casestudy.Models
     {
         [Key,Column(Order =1)]
         [DataType(DataType.EmailAddress)]
-        public string Userid { get; set; }
+        public int Userid { get; set; }
         [Key, Column(Order = 2)]
         public string Productid { get; set; }
         public string Productname { get; set; }
