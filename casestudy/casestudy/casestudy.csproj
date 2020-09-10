@@ -167,16 +167,11 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Main\admin.cshtml" />
-    <Content Include="Views\Main\customer.cshtml" />
-    <Content Include="Views\Main\Index.cshtml" />
-    <Content Include="Views\Main\log.cshtml" />
-    <Content Include="Views\Main\regestration.cshtml" />
     <Content Include="Views\Main\temp.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Main\regestration.cshtml" />
-    <Content Include="Views\Main\admin.cshtml" />
     <Content Include="Views\Main\customer.cshtml" />
     <Content Include="Views\Main\Index.cshtml" />
     <Content Include="Views\Main\log.cshtml" />
