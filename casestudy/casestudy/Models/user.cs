@@ -19,7 +19,7 @@ namespace casestudy.Models
         public string Firstname { get; set; }
 
         [Required(ErrorMessage = "Last Name is required")]
-        [Display(Name = "First Name")]
+        [Display(Name = "Last Name")]
         public string Lastname { get; set; }
 
         [Required(ErrorMessage = "Password is required")]
@@ -42,7 +42,7 @@ namespace casestudy.Models
         [Display(Name = "Contact Number")]
         [Required(ErrorMessage = "Contact number is required")]
         public string Contactnumber { get; set; }
-        
+       
         [Required(ErrorMessage = "email is required")]
         [Display(Name = "Email")]
         [DataType(DataType.EmailAddress)]

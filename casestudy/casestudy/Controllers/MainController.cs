@@ -24,8 +24,8 @@ namespace casestudy.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult regestration(user user)
-        {
-
+        {     
+           
             if (ModelState.IsValid)
             {
                 usercontext.userdetails.Add(user);
