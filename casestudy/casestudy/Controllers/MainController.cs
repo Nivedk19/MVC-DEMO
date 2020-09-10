@@ -15,7 +15,14 @@ namespace casestudy.Controllers
             return View();
         }
        
+        
+        public ActionResult regestration()
+        {
+            return View();
+        }
         private usercontext usercontext = new usercontext();
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult regestration(user user)
         {
 
@@ -90,6 +97,7 @@ namespace casestudy.Controllers
          return View();
 
          }
+       
        
        
               
