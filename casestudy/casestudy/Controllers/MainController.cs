@@ -40,11 +40,7 @@ namespace casestudy.Controllers
 
         }
 
-        public ActionResult temp()
-
-        {
-            return View();
-        }
+        
 
         public ActionResult log()
         {
@@ -61,7 +57,7 @@ namespace casestudy.Controllers
                 {
                     Session["email"] = obj.Email.ToString();
                     Session["password"] = obj.Password.ToString();
-                    return RedirectToAction("customer");
+                    return RedirectToAction("cview", "C");
                 }
                 else if (obj == null)
                 {
@@ -87,16 +83,6 @@ namespace casestudy.Controllers
 
        
         
-         public ActionResult admin()
-         {
-                   return View();
-         }
-         public ActionResult customer()
-         {
-
-         return View();
-
-         }
        
        
        
