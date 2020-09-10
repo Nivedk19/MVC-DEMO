@@ -80,6 +80,30 @@ namespace casestudy.Controllers
             }
             return View(product);
         }
+        public ActionResult Delete(string id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Product products = productcontext.productdetails.Find(id);
+            if (products == null)
+            {
+                return HttpNotFound();
+            }
+            return View(products);
+        }
+
+        // POST: Products/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(string id)
+        {
+            Product products = productcontext.productdetails.Find(id);
+            productcontext.productdetails.Remove(products);
+            productcontext.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
 
 

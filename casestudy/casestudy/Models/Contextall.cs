@@ -20,6 +20,6 @@ namespace casestudy.Models
         
         public DbSet<Feedback> Feedback { get; set; }
 
-        
+        public DbSet<Cart> Cart { get; set; }
     }
 }
