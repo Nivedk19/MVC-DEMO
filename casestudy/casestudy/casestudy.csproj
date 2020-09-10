@@ -175,6 +175,9 @@
     <Content Include="Views\Main\customer.cshtml" />
     <Content Include="Views\Main\Index.cshtml" />
     <Content Include="Views\Main\log.cshtml" />
+    <Content Include="Views\Administrator\Adding.cshtml" />
+    <Content Include="Views\Administrator\Listofproduct.cshtml" />
+    <Content Include="Views\Administrator\edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

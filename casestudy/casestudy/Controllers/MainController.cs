@@ -74,7 +74,7 @@ namespace casestudy.Controllers
                         {
                             Session["email"] = obje.email.ToString();
                             Session["password"] = obje.password.ToString();
-                            return RedirectToAction("Admin");
+                            return RedirectToAction("Listofproduct","Administrator");
                         }
                     }
                 }
