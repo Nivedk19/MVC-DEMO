@@ -39,6 +39,13 @@ namespace casestudy.Controllers
             return View(user);
 
         }
+
+        public ActionResult temp()
+
+        {
+            return View();
+        }
+
         public ActionResult log()
         {
             return View();
