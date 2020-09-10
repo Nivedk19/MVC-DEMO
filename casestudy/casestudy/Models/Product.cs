@@ -45,7 +45,7 @@ namespace casestudy.Models
         [Display(Name = "Discount")]
         public double discount { get; set; }
 
-        public int money { get; set; }
+
 
 
     }
