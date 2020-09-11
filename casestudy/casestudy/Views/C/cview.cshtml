@@ -7,7 +7,7 @@
 <h2>cview</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+   
 </p>
 <table class="table">
     <tr>
@@ -47,7 +47,7 @@
             @Html.DisplayFor(modelItem => item.discount)
         </td>
         <td>
-           
+            @Html.ActionLink("View Detials", "Detials",new { id = item.productid})
         </td>
     </tr>
 }
