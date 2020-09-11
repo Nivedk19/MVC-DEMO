@@ -80,7 +80,7 @@ namespace casestudy.Controllers
             }
             return View(product);
         }
-        public ActionResult Delete(string id)
+        public ActionResult Delete(int? id)
         {
             if (id == null)
             {
@@ -97,12 +97,12 @@ namespace casestudy.Controllers
         // POST: Products/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int id)
         {
             Product products = productcontext.productdetails.Find(id);
             productcontext.productdetails.Remove(products);
             productcontext.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Listofproduct");
         }
 
 

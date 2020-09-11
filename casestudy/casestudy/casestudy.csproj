@@ -182,6 +182,7 @@
     <Content Include="Views\Administrator\detials.cshtml" />
     <Content Include="Views\C\cview.cshtml" />
     <Content Include="Views\Administrator\Delete.cshtml" />
+    <Content Include="Views\Administrator\details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
