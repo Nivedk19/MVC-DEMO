@@ -24,19 +24,26 @@ namespace casestudy.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult regestration(user user)
-        {     
-           
-            if (ModelState.IsValid)
+        {
+            var obj = usercontext.userdetails.Where(u => u.Email == user.Email).FirstOrDefault();
+
+            if (obj != null)
+            {
+                ModelState.AddModelError("", "user already exist");
+                goto y;
+            }
+            else if (ModelState.IsValid)
             {
                 usercontext.userdetails.Add(user);
                 usercontext.SaveChanges();
                 return RedirectToAction("Index");
             }
-            else
+             else 
             {
-                ModelState.AddModelError("", "some error has occured");
+              ModelState.AddModelError("", "ERROR HAS OCCURED");
             }
-            return View(user);
+
+           y: return View(user);
 
         }
 
