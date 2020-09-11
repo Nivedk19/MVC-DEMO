@@ -39,7 +39,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.price)
+            <s> @Html.DisplayFor(model => model.price)</s>
         </dd>
 
         <dt>
@@ -47,12 +47,28 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.discount)
+             @Html.DisplayFor(model => model.discount)
         </dd>
 
+        <dt>
+            @Html.DisplayName("OFFER PRICE")
+        </dt>
+
+        <dd>
+           @ViewBag.a
+        </dd>
     </dl>
 </div>
-<p>
-   
+
+   <th align="right">
+       @using (Html.BeginForm("Tocart", "C", FormMethod.Post))
+       {
+           @Html.TextBox("noofitem", "", new { @type = "number",min="0" })
+           @Html.HiddenFor(m => m.productid, new { @class = "form-control", @value=Model.productid })
+           <br />
+           <input type="submit" value="ADD TO CART" class="btn-primary"/>
+       }
+   </th>
+<br /><br /><br />
     @Html.ActionLink("Back to List", "Index")
-</p>
+

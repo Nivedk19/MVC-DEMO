@@ -23,7 +23,8 @@ namespace casestudy.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Product product = productcontext.productdetails.Find(id);
-
+            var offerprice = product.price - product.discount;
+            ViewBag.a = offerprice;
             if(product==null)
             {
                 return HttpNotFound();
