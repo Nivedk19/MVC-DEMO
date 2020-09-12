@@ -10,20 +10,20 @@
 
     @using (Html.BeginForm("cview", "c", FormMethod.Post))
     {
-        // @Html.TextBox("key", "", new { @class = "form - control" })
-       @Html.DropDownList("key",
-       new List<SelectListItem>
-       {
-             new SelectListItem{Text="LG",Value="LG",Selected=true},
-           new SelectListItem { Text = "SAMSUNG", Value = "SAMSUNG" },
-           new SelectListItem { Text = "DELL", Value = "DELL" }
-
-
-       }
-      )
-        <br />
+        @Html.TextBox("key", "", new { @class = "form - control" })
+        
+        
         <input type="submit" value="Search" class="bg-secondary" />
     }
+    <script>
+        $(document).submit(function ()
+        {
+            $("#key1").change(function () {
+                var a = $("#key1 Option:Selected").text();
+                $("#key").text(a);
+            })
+        })
+    </script>
 
 </p>
 <table class="table">

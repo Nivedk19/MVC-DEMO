@@ -16,11 +16,16 @@ namespace casestudy.Controllers
         private Productcontext productcontext = new Productcontext();
         public ActionResult cview()
         {
+
+            var o = productcontext.productdetails.Select(u => u.Categoryname).Distinct().ToList();
+            SelectList list = new SelectList(o,"Categoryname");
+            ViewBag.list = list;
             return View(productcontext.productdetails.ToList());
         }
         [HttpPost]
         public ActionResult cview(string key)
         {
+            
             var pr = productcontext.productdetails.Where(u => u.Categoryname.Equals(key)).ToList();
             return View(pr);
         }
