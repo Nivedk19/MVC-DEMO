@@ -18,8 +18,8 @@ namespace casestudy.Models
         public DbSet<Transaction> Transactions { get; set; }
        
         
-        public DbSet<Feedback> Feedback { get; set; }
+        public DbSet<Feedback> Feedbacks { get; set; }
 
-        public DbSet<Cart> Cart { get; set; }
+        public DbSet<Cart> Carts { get; set; }
     }
 }

@@ -45,7 +45,8 @@ namespace casestudy.Models
         [Display(Name = "Discount")]
         public double discount { get; set; }
 
-
+        //public virtual ICollection<Cart> Carts { get; set; }
+        //public virtual ICollection<Transaction>Transactions{get;set;}
 
 
     }

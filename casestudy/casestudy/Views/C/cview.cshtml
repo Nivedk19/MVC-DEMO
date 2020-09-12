@@ -7,7 +7,24 @@
 <h2>cview</h2>
 
 <p>
-   
+
+    @using (Html.BeginForm("cview", "c", FormMethod.Post))
+    {
+        // @Html.TextBox("key", "", new { @class = "form - control" })
+       @Html.DropDownList("key",
+       new List<SelectListItem>
+       {
+             new SelectListItem{Text="LG",Value="LG",Selected=true},
+           new SelectListItem { Text = "SAMSUNG", Value = "SAMSUNG" },
+           new SelectListItem { Text = "DELL", Value = "DELL" }
+
+
+       }
+      )
+        <br />
+        <input type="submit" value="Search" class="bg-secondary" />
+    }
+
 </p>
 <table class="table">
     <tr>
@@ -41,10 +58,10 @@
             @Html.DisplayFor(modelItem => item.units)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.price)
+            @Html.DisplayFor(modelItem => item.price)@Html.DisplayName("₹")
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.discount)
+            @Html.DisplayFor(modelItem => item.discount)@Html.DisplayName("₹")
         </td>
         <td>
             @Html.ActionLink("View Detials", "Detials",new { id = item.productid})
